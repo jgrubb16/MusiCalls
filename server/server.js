@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 
+const apiRouter = require('./routes/api');
+
 const PORT = 3000;
 
 const PG_URI =
@@ -16,6 +18,8 @@ pool.query('SELECT * FROM people', (err, res) => {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use('/api', apiRouter);
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
 

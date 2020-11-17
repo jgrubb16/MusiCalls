@@ -13,9 +13,7 @@ import React from 'react';
 
     
 const RequestDisplay = (props) => {
-  constructor(props)
-  super(props);
-    this.state = {brand: "Ford"};
+  
   console.log('PROPS: ', props);
   return (
     <div className="requestBox">
