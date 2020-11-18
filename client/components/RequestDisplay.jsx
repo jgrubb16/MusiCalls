@@ -14,7 +14,7 @@ import React from 'react';
     
 const RequestDisplay = (props) => {
   
-  console.log('PROPS: ', props);
+  
   return (
     <div className="requestBox">
       <form />

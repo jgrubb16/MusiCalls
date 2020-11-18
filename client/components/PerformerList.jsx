@@ -9,8 +9,17 @@
  * ************************************
  */
 
-import React from 'react';
+import React, {useState, useEffect}  from 'react';
 
+const Data = (props) => {
+    const [performers, setPerformers] = useState([]);
+
+    const getPerformers = () => setView(performers);
+
+    useEffect(() => {
+        fetch('/api/performers')
+    })
+}
 
 const PerformerList = (props) => {
 
@@ -19,13 +28,14 @@ const PerformerList = (props) => {
     <div className="performerBox">
         <h1>Select Performer</h1>
       <br></br>
-      <button class="dropbtn"
+      <button class="dropbtn" dropdown></button>
+      <div class="dropdown-content">
+          
+      </div>
         type="submit"
         onClick={(e) => props.sendForm()}
         id="request-button"
-      >
-        Request Now!
-      </button>
+      
     </div>
   );
 };

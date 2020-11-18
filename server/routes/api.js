@@ -1,6 +1,6 @@
 const express = require('express');
 
-const peopleController = require('../controllers/peopleController.js');
+const performerController = require('../controllers/performerController.js');
 
 const router = express.Router();
 
@@ -13,9 +13,9 @@ const router = express.Router();
 //   }
 // );
 
-// router.get('/species', starWarsController.getSpecies, (req, res) =>
-//   res.status(200).json(res.locals.species)
-// );
+router.get('/performers', performerController.getPerformer, (req, res) =>
+  res.status(200).json(res.locals.performers)
+);
 
 // router.get('/homeworld', starWarsController.getHomeworld, (req, res) =>
 //   res.status(200).json(res.locals.planet)
