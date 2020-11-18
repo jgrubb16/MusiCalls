@@ -24,12 +24,11 @@ performerController.getPerformer = async (req, res, next) => {
 performerController.addMessage = async (req, res, next) => {
   // const char = `SELECT * FROM people`;
   console.log('Jordan: ', req.body);
-  const update = `insert into SALE (performer_id,message)
-  values (10,'howdy')`;
+  const update = `INSERT into SALE (performer_id,message,customer_email,customer_name)
+  values(${req.body.id},'${req.body.message}','${req.body.emailAddress}','${req.body.name}')`;
   try {
-    const performerList = await db.query(performer);
-    console.log('PerformerList: ', performerList.rows);
-    res.locals.performers = performerList.rows;
+    await db.query(update);
+    console.log('updatedInfo: ', update.rows);
     return next();
   } catch (e) {
     return next({

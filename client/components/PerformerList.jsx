@@ -46,9 +46,13 @@ const PerformerList = (props) => {
 
 // console.log()
   return (
-    <div className="performerBox">
+    <div class="main">
+        <img id="logo" src="./client/media/Broadway.png" alt="logo"/>
+        <img id="select" src="./client/media/Select.png" alt="logo"/>
       <br></br>
+      <div id='perPics'>
       {performers} 
+      </div>
     </div>
   );
 };

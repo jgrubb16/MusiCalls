@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PerformerList from './components/PerformerList.jsx'
-import RequestDisplay from './components/RequestDisplay.jsx'
-import { Link } from "@reach/router";
+import './stylesheets/Performers.scss'
 
 const App = () => {
 //   constructor(props) {
@@ -15,7 +14,7 @@ const App = () => {
 // }
 return (
     
-      <div>
+      <div class="body">
         <PerformerList />
       </div>
 )
