@@ -11,12 +11,13 @@
 
 import React from 'react';
 
-    
+import '../stylesheets/Performers.scss'
+
 const RequestDisplay = (props) => {
   
   
   return (
-    <div className="requestBox">
+    <div id="requestBox">
       <form />
       <label htmlFor="fullName">Recipient's Name:</label>
       <input type="text" id="name" name="name" />

@@ -1,10 +1,16 @@
 .performerBox {
   display: grid;
-  width: 8rem;
-  grid-row-gap: 0.5rem;
-  grid-template-areas: 'button';
+  grid-template-areas:
+    'a a a box'
+    'a a a';
+
+  width: 15%;
+  grid-row-gap: 0.3rem;
+}
+#requestBox {
+  grid-area: box;
 }
 
-#buttons {
-  width: 1rem;
-}
+// #buttons {
+//   width: 1rem;
+// }

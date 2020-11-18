@@ -22,7 +22,9 @@ const PerformerList = (props) => {
           .then((data) => data.json())
           .then((response) => 
           setPerformers(response.map((person,i) => {
-          return <button className="buttons" key={`performer${i}`}>{person.name}</button>
+          // return <button className="buttons" key={`performer${i}`}>{person.name}</button>
+          return <a className="performer"href={person.image} key={`performers${i}`}><img alt="pic" src={person.image} width='100%' height='100%'></img><h3 id="nameTag">{person.name}</h3></a>
+          
           })
         )
        )
@@ -34,7 +36,9 @@ console.log()
     <div className="performerBox">
         <h1>Select Performer</h1>
       <br></br>
-      {performers}     
+      <div >
+      {performers} 
+      </div>    
     </div>
   );
 };
