@@ -4,7 +4,7 @@
 //  * @module  PerformerList
 //  * @author  Jordan Grubb
 //  * @date    November 17
- * @description presentation component that renders client input field
+ *    @description presentation component that renders client input field
  *
  * ************************************
  */
@@ -23,7 +23,7 @@ const PerformerList = (props) => {
           .then((response) => 
           setPerformers(response.map((person,i) => {
           // return <button className="buttons" key={`performer${i}`}>{person.name}</button>
-          return <a className="performer"href={person.image} key={`performers${i}`}><img alt="pic" src={person.image} width='100%' height='100%'></img><h3 id="nameTag">{person.name}</h3></a>
+          return <a className="performer" href={person.image} key={`performers${i}`}><img id="perfPic" alt="pic" src={person.image}></img><h3 id="nameTag">{person.name}</h3></a>
           
           })
         )
@@ -34,11 +34,8 @@ const PerformerList = (props) => {
 console.log()
   return (
     <div className="performerBox">
-        <h1>Select Performer</h1>
       <br></br>
-      <div >
       {performers} 
-      </div>    
     </div>
   );
 };

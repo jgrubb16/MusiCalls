@@ -1,16 +1,22 @@
 .performerBox {
-  display: grid;
-  grid-template-areas:
-    'a a a box'
-    'a a a';
-
-  width: 15%;
-  grid-row-gap: 0.3rem;
+  display: flex;
 }
-#requestBox {
-  grid-area: box;
-}
+// #requestBox {
+//   grid-area: box;
+// }
 
 // #buttons {
 //   width: 1rem;
 // }
+
+.performer {
+}
+#perfPic {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+h1 {
+  display: flex;
+  width: 100%;
+}
