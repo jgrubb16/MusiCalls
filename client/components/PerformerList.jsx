@@ -10,32 +10,31 @@
  */
 
 import React, {useState, useEffect}  from 'react';
-
-const Data = (props) => {
-    const [performers, setPerformers] = useState([]);
-
-    const getPerformers = () => setView(performers);
-
-    useEffect(() => {
-        fetch('/api/performers')
-    })
-}
-
+import '../stylesheets/Performers.scss'
 const PerformerList = (props) => {
 
-  console.log('PROPS: ', props);
+  const [performers, setPerformers] = useState([]);
+
+    // const getPerformers = () => setView(performers);
+
+    useEffect(() => {
+        fetch('/api')
+          .then((data) => data.json())
+          .then((response) => 
+          setPerformers(response.map((person,i) => {
+          return <button className="buttons" key={`performer${i}`}>{person.name}</button>
+          })
+        )
+       )
+       console.log('mounted')
+       return () => console.log('unmounted')
+    },[])
+console.log()
   return (
     <div className="performerBox">
         <h1>Select Performer</h1>
       <br></br>
-      <button class="dropbtn" dropdown></button>
-      <div class="dropdown-content">
-          
-      </div>
-        type="submit"
-        onClick={(e) => props.sendForm()}
-        id="request-button"
-      
+      {performers}     
     </div>
   );
 };

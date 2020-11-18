@@ -13,7 +13,7 @@ const router = express.Router();
 //   }
 // );
 
-router.get('/performers', performerController.getPerformer, (req, res) =>
+router.get('/', performerController.getPerformer, (req, res) =>
   res.status(200).json(res.locals.performers)
 );
 

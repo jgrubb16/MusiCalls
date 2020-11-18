@@ -1,0 +1,10 @@
+.performerBox {
+  display: grid;
+  width: 8rem;
+  grid-row-gap: 0.5rem;
+  grid-template-areas: 'button';
+}
+
+#buttons {
+  width: 1rem;
+}

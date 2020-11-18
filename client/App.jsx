@@ -3,7 +3,7 @@ import PerformerList from './components/PerformerList.jsx'
 import RequestDisplay from './components/RequestDisplay.jsx'
 import { Link } from "@reach/router";
 
-class App extends Component {
+const App = () => {
 //   constructor(props) {
 //     super(props);
 //     this.state = {peformers: []};
@@ -13,15 +13,13 @@ class App extends Component {
 //   perfomerArray = [];
 
 // }
-
-  render() {
-    return (
+return (
+    
       <div>
         <PerformerList />
         <RequestDisplay />
       </div>
-    );
-  }
+)
 }
 // const App = () => (
 //   <div>

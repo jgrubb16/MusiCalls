@@ -18,10 +18,10 @@ const RequestDisplay = (props) => {
   return (
     <div className="requestBox">
       <form />
-      <label for="fullName">Recipient's Name:</label>
+      <label htmlFor="fullName">Recipient's Name:</label>
       <input type="text" id="name" name="name" />
       <br></br>
-      <label for="Email">Recipient's Email:</label>
+      <label htmlFor="Email">Recipient's Email:</label>
       <input type="text" id="email" name="email" />
       <br></br>
       <textarea rows = "5" cols = "60" name = "requestBody" placeholder="Enter Your Request">

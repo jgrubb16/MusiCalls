@@ -6,11 +6,12 @@ const performerController = {};
 
 performerController.getPerformer = async (req, res, next) => {
   // const char = `SELECT * FROM people`;
-  const performer = `SELECT name FROM "public"."performers"`;
+  const performer = `SELECT * FROM performers`;
   try {
-    res.locals.performers = await db.query(performer);
-    // await console.log(res.locals.characters.rows);
-    next();
+    const performerList = await db.query(performer);
+    console.log('PerformerList: ', performerList.rows);
+    res.locals.performers = performerList.rows;
+    return next();
   } catch (e) {
     return next({
       log: `Database error`,
@@ -19,3 +20,5 @@ performerController.getPerformer = async (req, res, next) => {
     });
   }
 };
+
+module.exports = performerController;

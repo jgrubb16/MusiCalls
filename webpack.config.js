@@ -9,9 +9,9 @@ module.exports = {
   },
   devServer: {
     publicPath: '/build/',
-    // proxy: {
-    //   '/api': 'http://localhost:3000',
-    // },
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
   },
   module: {
     rules: [
@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
