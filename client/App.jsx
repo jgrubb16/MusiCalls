@@ -17,7 +17,6 @@ return (
     
       <div>
         <PerformerList />
-        <RequestDisplay />
       </div>
 )
 }

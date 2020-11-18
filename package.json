@@ -30,6 +30,7 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "webpack": "^4.3.32",
+    "webpack-node-externals": "^2.5.2",
     "webpack-serve": "^3.2.0"
   },
   "devDependencies": {
